@@ -31,11 +31,13 @@ Start BrowserSync server on your source files with live reload
 #### Run Unit Tests
 Run your unit tests with Karma
 
-    $ gulp test
+   $ gulp test
 
+#### Run Unit Tests with Watch Mode
 Run your unit tests with Karma in watch mode
 
    $ gulp test:auto
+
 #### Test Distributed Version Locally
 Start BrowserSync server on your optimized application without live reload
 

@@ -7,12 +7,15 @@
       <h1>REFLEXIVE</h1>
       <p class="lead">
         <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>
-        Theme for the Angular Gulp Generator
+        A Material Theme for the Angular Gulp Generator
       </p>
       <md-button class="md-raised animated infinite" ng-class="main.classAnimation" ng-click="main.showToastr()">Splendid Toastr</md-button>
       <p>
         With ♥ thanks to the contributions of<acme-malarkey extra-values="['Yeoman', 'Gulp', 'Angular']"></acme-malarkey>
       </p>
+      <md-button ng-click="toggleRight()" ng-hide="isOpenRight()" class="md-primary">
+        Toggle Right SideNav
+      </md-button>
     </section>
     <div class="techs" layout-align="center">
       <md-card ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'">
@@ -27,4 +30,20 @@
       </md-card>
     </div>
   </md-content>
+  <md-sidenav class="md-sidenav-right md-whiteframe-4dp" md-component-id="right">
+    <md-toolbar class="md-theme-light">
+      <h1 class="md-toolbar-tools">Sidenav Right</h1>
+    </md-toolbar>
+    <md-content ng-controller="MainController" layout-padding>
+      <form>
+        <md-input-container>
+          <label for="testInput">Test input</label>
+          <input type="text" id="testInput" ng-model="data" md-autofocus>
+        </md-input-container>
+      </form>
+      <md-button ng-click="close()" class="md-primary">
+        Close Sidenav Right
+      </md-button>
+    </md-content>
+  </md-sidenav>
 </div>

@@ -1,17 +1,19 @@
-.acme-navbar-text{
+md-toolbar.md-default-theme:not(.md-menu-toolbar),
+md-toolbar:not(.md-menu-toolbar) {
+  background: #7d7d7d;
+}
+.acme-navbar-text {
   color: white;
 }
-
 a {
   color: black;
 }
-
 h1 {
   font-size: 2em;
   margin: 0;
   line-height: 1.25em;
 }
-
-a:hover, a:focus {
-  color: greenyellow;
+a:focus,
+a:hover {
+  color: #4a4a4a;
 }

@@ -34,12 +34,12 @@
 			});
 		}
 
-		$scope.toggleLeft = buildDelayedToggler('left');
-		$scope.toggleRight = buildToggler('right');
-		$scope.isOpenRight = function() {
+		vm.toggleLeft = buildDelayedToggler('left');
+		vm.toggleRight = buildToggler('right');
+		vm.isOpenRight = function() {
 			return $mdSidenav('right').isOpen();
 		};
-		function debounce(func, wait, context) {
+		function debounce(func, wait) {
 			var timer;
 			return function debounced() {
 				var context = $scope,
@@ -71,7 +71,7 @@
 				});
 			}
 		}
-		$scope.close = function() {
+		vm.close = function() {
 			// Component lookup should always be available since we are not using `ng-if`
 			$mdSidenav('right').close().then(function() {
 				$log.debug("close RIGHT is done");

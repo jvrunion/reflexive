@@ -79,6 +79,12 @@ section.jumbotron {
     }
   }
 }
+md-sidenav {
+  position: fixed;
+}
+md-backdrop.md-sidenav-backdrop {
+  position: fixed;
+}
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
  *  all your sass files automatically

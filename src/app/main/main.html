@@ -13,7 +13,7 @@
       <p>
         With ♥ thanks to the contributions of<acme-malarkey extra-values="['Yeoman', 'Gulp', 'Angular']"></acme-malarkey>
       </p>
-      <md-button ng-click="toggleRight()" ng-hide="isOpenRight()" class="md-primary">
+      <md-button ng-click="main.toggleRight()" ng-hide="main.isOpenRight()" class="md-primary">
         Toggle Right SideNav
       </md-button>
     </section>
@@ -41,7 +41,7 @@
           <input type="text" id="testInput" ng-model="data" md-autofocus>
         </md-input-container>
       </form>
-      <md-button ng-click="close()" class="md-primary">
+      <md-button ng-click="main.close()" class="md-primary">
         Close Sidenav Right
       </md-button>
     </md-content>

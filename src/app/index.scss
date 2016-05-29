@@ -88,6 +88,7 @@ md-sidenav {
 }
 md-backdrop.md-sidenav-backdrop {
   position: fixed;
+  z-index: 999;
 }
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject

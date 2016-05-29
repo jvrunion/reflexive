@@ -1,5 +1,5 @@
-# Reflexive
-AngularJS Material Design Gulp SASS Web Starter Kit
+# Reflexive - A Theme for the AngularJS Gulp Generator
+AngularJS Material Design Gulp SASS Themed Web Starter Kit
 
 Demo: http://reflexive-material.netlify.com/#/
 
@@ -20,7 +20,6 @@ First you will need a couple of things to get started...
 Setup is easy and takes only a couple of minutes:
 
     $ npm-install
-    $ bower-update
 
 #### Initial Build
 Build an optimized version of your application in folder dist

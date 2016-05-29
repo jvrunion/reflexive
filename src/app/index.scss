@@ -79,8 +79,12 @@ section.jumbotron {
     }
   }
 }
+md-content {
+  overflow: hidden;
+}
 md-sidenav {
   position: fixed;
+  z-index: 9999;
 }
 md-backdrop.md-sidenav-backdrop {
   position: fixed;

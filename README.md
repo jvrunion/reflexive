@@ -31,12 +31,11 @@ Start BrowserSync server on your source files with live reload
 #### Run Unit Tests
 Run your unit tests with Karma
 
-   $ gulp test
-
+    $ gulp test
 #### Run Unit Tests with Watch Mode
 Run your unit tests with Karma in watch mode
 
-   $ gulp test:auto
+    $ gulp test:auto
 
 #### Test Distributed Version Locally
 Start BrowserSync server on your optimized application without live reload
@@ -46,9 +45,9 @@ Start BrowserSync server on your optimized application without live reload
 #### e2e
 Launch your e2e tests with Protractor
 
-   $ gulp protractor
+    $ gulp protractor
 
 #### e2e Dist
 Launch your e2e tests with Protractor on the dist files
 
-   $ gulp protractor:dist
+    $ gulp protractor:dist

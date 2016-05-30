@@ -1,10 +1,10 @@
 (function() {
 	'use strict';
 
-	angular.module('reflexive').directive('acmeNavbar', acmeNavbar);
+	angular.module('reflexive').directive('reflexiveNavbar', reflexiveNavbar);
 
 	/** @ngInject */
-	function acmeNavbar() {
+	function reflexiveNavbar() {
 		var directive = {
 			restrict: 'E',
 			templateUrl: 'app/components/navbar/navbar.html',

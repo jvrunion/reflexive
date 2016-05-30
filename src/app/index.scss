@@ -61,11 +61,19 @@ section.jumbotron {
   padding: 30px;
   background-color: #dedede;
   text-align: center;
-  color: #505050;
+  color: #f8f8f8;
+  background-image: url('../assets/images/material-wallpapers-3.png');
+  background-size: cover;
   h1 {
     font-size: 3em;
     font-weight: 100;
-    color: #000;
+    color: #f8f8f8;
+  }
+  .md-button {
+    color: #f8f8f8;
+    &.animated {
+      color: #333;
+    }
   }
 }
 .techs {
@@ -89,6 +97,21 @@ md-sidenav {
 md-backdrop.md-sidenav-backdrop {
   position: fixed;
   z-index: 999;
+}
+.md-button.md-default-theme.md-primary,
+.md-button.md-primary,
+a.md-button.md-default-theme.md-primary,
+a.md-button.md-primary {
+  color: #fefefe;
+}
+md-input-container.md-default-theme.md-input-focused:not(.md-input-invalid) .md-input,
+md-input-container.md-input-focused:not(.md-input-invalid) .md-input {
+  border-color: #fefefe;
+}
+md-input-container.md-input-focused label:not(.md-no-float),
+md-input-container.md-input-has-placeholder label:not(.md-no-float),
+md-input-container.md-input-has-value label:not(.md-no-float) {
+  color: #fefefe;
 }
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject

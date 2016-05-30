@@ -4,7 +4,7 @@
 	angular.module('reflexive').controller('MainController', MainController);
 
 	/** @ngInject */
-	function MainController($scope, $timeout, webDevTec, toastr, $log, $mdSidenav) {
+	function MainController($timeout, webDevTec, toastr, $log, $mdSidenav) {
 		var vm = this;
 
 		vm.awesomeThings = [];
@@ -42,7 +42,7 @@
 		function debounce(func, wait) {
 			var timer;
 			return function debounced() {
-				var context = $scope,
+				var context = vm,
 					args = Array.prototype.slice.call(arguments);
 				$timeout.cancel(timer);
 				timer = $timeout(function() {

@@ -113,6 +113,15 @@ md-input-container.md-input-has-placeholder label:not(.md-no-float),
 md-input-container.md-input-has-value label:not(.md-no-float) {
   color: #fefefe;
 }
+.md-button.md-default-theme:hover:not([disabled]),
+.md-button:hover:not([disabled]),
+a.md-button.md-default-theme:hover:not([disabled]),
+a.md-button:hover:not([disabled]) {
+  color: #fefefe;
+  &.md-raised {
+    color: #3e3e3e;
+  }
+}
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
  *  all your sass files automatically

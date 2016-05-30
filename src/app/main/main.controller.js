@@ -34,35 +34,21 @@
 			});
 		}
 
-		vm.toggleLeft = buildDelayedToggler('left');
 		vm.toggleRight = buildToggler('right');
+		vm.toggleLeft = buildToggler('left');
+
 		vm.isOpenRight = function() {
 			return $mdSidenav('right').isOpen();
 		};
-		function debounce(func, wait) {
-			var timer;
-			return function debounced() {
-				var context = vm,
-					args = Array.prototype.slice.call(arguments);
-				$timeout.cancel(timer);
-				timer = $timeout(function() {
-					timer = undefined;
-					func.apply(context, args);
-				}, wait || 10);
-			};
-		}
+		vm.isOpenLeft = function() {
+			return $mdSidenav('left').isOpen();
+		};
+
 		/**
      * Build handler to open/close a SideNav; when animation finishes
      * report completion in console
      */
-		function buildDelayedToggler(navID) {
-			return debounce(function() {
-				// Component lookup should always be available since we are not using `ng-if`
-				$mdSidenav(navID).toggle().then(function() {
-					$log.debug("toggle " + navID + " is done");
-				});
-			}, 200);
-		}
+
 		function buildToggler(navID) {
 			return function() {
 				// Component lookup should always be available since we are not using `ng-if`
@@ -71,10 +57,16 @@
 				});
 			}
 		}
-		vm.close = function() {
+		vm.closeRight = function() {
 			// Component lookup should always be available since we are not using `ng-if`
 			$mdSidenav('right').close().then(function() {
 				$log.debug("close RIGHT is done");
+			});
+		};
+		vm.closeLeft = function() {
+			// Component lookup should always be available since we are not using `ng-if`
+			$mdSidenav('left').close().then(function() {
+				$log.debug("close LEFT is done");
 			});
 		};
 	}

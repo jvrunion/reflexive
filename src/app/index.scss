@@ -93,6 +93,10 @@ md-content {
 md-sidenav {
   position: fixed;
   z-index: 9999;
+  md-toolbar.md-default-theme:not(.md-menu-toolbar),
+  md-toolbar:not(.md-menu-toolbar) {
+    background: #000;
+  }
 }
 md-backdrop.md-sidenav-backdrop {
   position: fixed;

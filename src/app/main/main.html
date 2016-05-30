@@ -1,6 +1,6 @@
 <div layout="vertical" layout-fill>
   <md-content>
-    <header>
+    <header class="md-whiteframe-4dp">
       <reflexive-navbar creation-date="main.creationDate"></reflexive-navbar>
     </header>
     <section class="jumbotron">
@@ -16,6 +16,9 @@
       <md-button ng-click="main.toggleRight()" ng-hide="main.isOpenRight()" class="md-primary">
         Toggle Right SideNav
       </md-button>
+      <md-button ng-click="main.toggleLeft()" ng-hide="main.isOpenLeft()" class="md-primary">
+        Toggle Left SideNav
+      </md-button>
     </section>
     <div class="techs" layout-align="center">
       <md-card ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'">
@@ -30,7 +33,7 @@
       </md-card>
     </div>
   </md-content>
-  <md-sidenav class="md-sidenav-right md-whiteframe-4dp" md-component-id="right">
+  <md-sidenav class="md-sidenav-right" md-component-id="right" md-whiteframe="4">
     <md-toolbar class="md-theme-light">
       <h1 class="md-toolbar-tools">Sidenav Right</h1>
     </md-toolbar>
@@ -41,8 +44,21 @@
           <input type="text" id="testInput" ng-model="data" md-autofocus>
         </md-input-container>
       </form>
-      <md-button ng-click="main.close()" class="md-primary">
+      <md-button ng-click="main.closeRight()" class="md-primary">
         Close Sidenav Right
+      </md-button>
+    </md-content>
+  </md-sidenav>
+  <md-sidenav class="md-sidenav-left" md-component-id="left" md-whiteframe="4">
+    <md-toolbar class="md-theme-indigo">
+      <h1 class="md-toolbar-tools">Sidenav Left</h1>
+    </md-toolbar>
+    <md-content layout-padding ng-controller="MainController">
+      <p>
+        Left Navigation Panel.
+      </p>
+      <md-button ng-click="main.closeLeft()" class="md-primary">
+        Close Sidenav Left
       </md-button>
     </md-content>
   </md-sidenav>
